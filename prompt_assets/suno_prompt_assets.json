@@ -1,0 +1,180 @@
+{
+  "version": "2026-04-28",
+  "product": "Sunology",
+  "purpose": "Structured prompt assets for future self-hosted Suno generation workflows",
+  "models": {
+    "v5": {
+      "strengths": [
+        "arrangement stability",
+        "instrumental identity",
+        "section progression"
+      ],
+      "preferred_use_cases": [
+        "instrumental-first generation",
+        "genre-sensitive structure building",
+        "first-pass arrangement drafts"
+      ]
+    },
+    "v5_5": {
+      "strengths": [
+        "expressive vocal behavior",
+        "persona and voice cooperation",
+        "character-rich performance"
+      ],
+      "known_risks": [
+        "repetitive intros",
+        "title leakage",
+        "hiss or harsh highs",
+        "flat emotional plateau",
+        "genre washout",
+        "mid-song collapse"
+      ],
+      "preferred_use_cases": [
+        "vocal-forward tracks",
+        "persona-guided refinement",
+        "voice-aware generation"
+      ]
+    }
+  },
+  "inputs": {
+    "generation": [
+      "summary",
+      "research",
+      "funny_comments",
+      "injected_context"
+    ],
+    "refinement": [
+      "original_lyrics",
+      "summary",
+      "research",
+      "style_prompt",
+      "injected_context",
+      "persona_context"
+    ]
+  },
+  "output_contracts": {
+    "generation": [
+      "STYLE",
+      "LYRICS",
+      "OPTIONAL_NOTES"
+    ],
+    "refinement": [
+      "REFINED_STYLE",
+      "REFINED_LYRICS",
+      "CHANGE_NOTES"
+    ]
+  },
+  "style_field_schema": {
+    "ordered_layers": [
+      "genre_and_pulse",
+      "instrumentation_and_mood",
+      "vocal_behavior",
+      "arrangement_movement",
+      "standout_production_trait"
+    ],
+    "rules": [
+      "Prefer one compact producer-style paragraph",
+      "Use BPM only when rhythm accuracy materially matters",
+      "Do not use giant unordered tag lists",
+      "Do not rely on artist-name imitation",
+      "Describe movement, not only static sound"
+    ]
+  },
+  "lyrics_field_schema": {
+    "allowed_controls": [
+      "section labels in square brackets",
+      "rare audible non-lyrical cues",
+      "final-chorus intensity markers",
+      "performable ad-libs in parentheses"
+    ],
+    "prohibited_controls": [
+      "analysis notes",
+      "draft commentary",
+      "todo markers",
+      "fake system instructions",
+      "dense markup clutter"
+    ],
+    "rules": [
+      "Keep cues sparse",
+      "Only include cues that should change the audible result",
+      "Use the lyric sheet for local energy control when needed",
+      "Do not turn the lyrics into a control panel"
+    ]
+  },
+  "workflow_presets": [
+    {
+      "id": "v5_first_then_v5_5_vocals",
+      "name": "v5 arrangement, then v5.5 vocal feel",
+      "use_when": [
+        "v5.5 introduces hiss",
+        "v5.5 intros become repetitive",
+        "v5 arrangement logic is stronger than v5.5 for the song"
+      ],
+      "steps": [
+        "Generate a structure-first pass in v5",
+        "Evaluate whether the instrumental identity is stable",
+        "Test the same concept in v5.5 only if stronger vocal expression is needed"
+      ]
+    },
+    {
+      "id": "lean_style_plus_lyric_control",
+      "name": "Lean style field with lyric-side section control",
+      "use_when": [
+        "v5.5 is flattening section nuance",
+        "the style prompt is overpowering the lyrics",
+        "the song needs precise final-chorus lift"
+      ],
+      "steps": [
+        "Reduce the style field to core identity",
+        "Move only the most important section lifts into lyrics",
+        "Regenerate while keeping the song concept fixed"
+      ]
+    },
+    {
+      "id": "seed_or_cover_defense",
+      "name": "Seed or cover workflow for genre protection",
+      "use_when": [
+        "niche genre keeps washing out",
+        "text prompts collapse into mainstream pop behavior",
+        "melodic or structural identity needs a harder anchor"
+      ],
+      "steps": [
+        "Specify the genre with explicit instrumentation",
+        "If text-only prompting still drifts, move to seed or cover workflows",
+        "Use prompt text to refine rather than replace the source anchor"
+      ]
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "FM-01",
+      "name": "repetitive_intros",
+      "first_response": "Shorten intro guidance and bring the song idea in earlier"
+    },
+    {
+      "id": "FM-02",
+      "name": "title_leakage",
+      "first_response": "Delay title repetition and rewrite the first lines as scene entry"
+    },
+    {
+      "id": "FM-03",
+      "name": "hiss_or_harsh_highs",
+      "first_response": "Simplify style density and compare the same package in v5"
+    },
+    {
+      "id": "FM-04",
+      "name": "flat_emotional_plateau",
+      "first_response": "Reduce style overload and restore local contrast in the lyrics"
+    },
+    {
+      "id": "FM-05",
+      "name": "genre_washout",
+      "first_response": "Specify instruments more clearly and move earlier to seed or cover workflows"
+    },
+    {
+      "id": "FM-06",
+      "name": "mid_song_collapse",
+      "first_response": "Clarify bridge purpose and remove competing style signals"
+    }
+  ]
+}
