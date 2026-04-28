@@ -1,54 +1,154 @@
-# Suno v4.5+ Advanced Prompting Tips (Use Carefully)
+# Suno v5 and v5.5 Advanced Tips
 
-These patterns come from community experimentation (including Reddit threads). They can help steer comedic outcomes, but may also fail or be over‑literal. Prefer clean narrative prompts first; layer these only when you need extra control.
+These are advanced techniques that still appear useful after reviewing the old
+research against current Suno behavior.
 
-- Capitalization and specificity can matter for genres
-  - Try Proper-Case: “Synthwave”, “Pop-Punk”, “Indie-Folk” if lowercase results drift.
-  - Hyphenated genres sometimes track better than spaced: “pop‑punk” vs “pop punk”.
+Use them selectively. They are support tools, not the foundation of the prompt.
 
-- Put critical moments in [] with timestamps
-  - The Style Prompt sets the vibe; bracketed cues enforce moment‑to‑moment.
-  - Examples: “[00:44 record scratch — full stop]”, “[01:05 spoken aside: deadpan]”.
+## High-Value Advanced Tips
 
-- Prefer descriptive SFX over onomatopoeia
-  - “[comedy slide whistle glissando]” tends to work better than “[boing]”.
-  - If an SFX is ignored, retry with a clearer label and a timestamp.
+### 1. Put the song arc in the Style field
 
-- Stack bracket tags for intros and flips (sparingly)
-  - “[intro – tape hiss, small room reverb, solo nylon guitar]”
-  - “[00:40 polka break — accordion + tuba]”
-  - Keep it readable; avoid long paragraphs inside []
+This is still one of the strongest levers.
 
-- Never put instructions in ()
-  - Anything in parentheses will likely be sung. Reserve () for ad‑libs and backing vocals.
-  - Put performance directions only in []: “[Spoken word, deadpan]”, “[Whisper]”.
+Do not just describe the static sound. Describe progression:
 
-- For “talky” delivery, be explicit
-  - Style Prompt: “Vocal Cues: conversational, spoken rhythm, dry mic, minimal pitch.”
-  - In lyrics: add “[doesn’t have to rhyme]” to reduce forced rhymes.
+- how the intro feels
+- what changes at the chorus
+- what drops out
+- what returns bigger
 
-- SFX reliability varies
-  - Common: “[record scratch]”, “[crowd gasp]”, “[laugh track — short]”, “[rimshot]”.
-  - Niche SFX may require retries or more context: “[retro game coin sfx, short]”.
+### 2. Use lyrics for structural clarity
 
-- Energy shaping works better with timestamps than vague words
-  - “[00:28 drop — drums out, bass sustain]” > “quiet down here”.
+Still viable and more useful than in older versions.
 
-- Keep final lyrics clean
-  - Only allow [] and () markers; forbid code fences, numbering, or drafting notes in the final.
+Section tags and a few carefully placed cues help Suno map the song shape.
 
-When in doubt, simplify and push intent into the narrative Style Prompt, then add a few high‑impact bracketed cues with timestamps for comedic timing.
+### 3. Use only a few strong non-lyrical cues
 
-## Additional Advanced Tricks from Recent Community (2025)
+Good candidates:
 
-- **Metatags for Structure:** Use tags like [Verse], [Chorus], [Bridge], [Intro], [Outro] to guide song sections.
+- `[record scratch - full stop]`
+- `[spoken aside]`
+- `[crowd gasp]`
+- `[short laugh track]`
+- `[kazoo break]`
+- `[phone ring]`
 
-- **Production Techniques Over Genres:** Instead of just "rock" or "pop", specify production methods like "FL Studio reverb plugin, Ableton Live automation, Logic Pro compression" for more authentic sounds.
+These work best when:
 
-- **Jailbreaking and Prompt Injection:** Some users experiment with prompt injection to bypass restrictions (e.g., using real artist names indirectly). However, this may violate terms and is not recommended.
+- they mark a real change
+- they are mirrored in the Style field
+- they are rare enough to matter
 
-- **Version-Specific Adjustments:** In Suno 4.5+, JSON or XML formatting tricks are less effective; focus on finesse in narrative prompts.
+### 4. Be explicit about vocal delivery
 
-- **Cheat Sheets:** Refer to community cheat sheets for prompt examples across genres.
+Useful descriptors that still map well:
 
-These can enhance control but test carefully, as results vary.
+- close-mic
+- airy
+- deadpan
+- talk-sung
+- wide-open
+- strained
+- intimate
+- layered harmonies
+
+### 5. Use BPM only when it helps
+
+Still viable, but do not force it into every prompt.
+
+Use BPM when:
+
+- comedy timing depends on speed
+- dance genre identity matters
+- the arrangement needs a precise pulse
+
+Skip it when a looser tempo feel is enough.
+
+### 6. Let v5.5 personalization do real work
+
+If available, these are stronger than many old text hacks:
+
+- Voices
+- Style Personas
+- Custom Models
+- My Taste augmentation
+
+Advanced prompting should cooperate with them, not fight them.
+
+## Tips That Are Sometimes Useful
+
+### 1. Timed cues
+
+Useful for a few critical moments, but easy to overuse.
+
+Best for:
+
+- hard comedic stops
+- spoken reveals
+- bridge flips
+- staged re-entry moments
+
+### 2. Genre flips
+
+Still viable for comedy or surprise songs.
+
+Examples:
+
+- indie verse into polka break
+- earnest chorus into novelty bridge
+- stripped bridge into oversized final chorus
+
+This works only if the transition feels intentional.
+
+### 3. Conversational lyric guidance
+
+Helpful when you want less sing-song phrasing.
+
+Use:
+
+- direct speech
+- short phrases
+- talk-sung lines
+- dry performance cues
+
+## Tips To Treat As Low Confidence
+
+These showed up in older community research, but should not be treated as core
+method:
+
+- capitalization superstition
+- prompt injection tricks
+- fake schema formatting
+- overstacked bracket tags
+- celebrity-name smuggling
+- excessive meta syntax
+
+They may work occasionally, but they are not stable enough to build the system
+around.
+
+## Recommended Advanced Workflow
+
+1. Write a clear Style field.
+2. Write a clean Lyrics field.
+3. Add only the two or three cues that materially affect the audible result.
+4. If using v5.5 features, choose whether the song should lean on a Voice,
+   Persona, or Custom Model.
+5. Regenerate by changing one real variable at a time:
+   style density, vocal direction, structure, or cue placement.
+
+## Comedy-Specific Advanced Tips
+
+- The best gag is often a musical interruption, not a pile of joke lines.
+- Stop-time reveals are still useful.
+- A deadpan spoken aside can work better than a sung punchline.
+- A single novelty break is stronger than repeated novelty spam.
+- Stronger hooks outperform denser joke count.
+
+## Working Rule
+
+Advanced prompting should increase control, not increase prompt noise.
+
+If an advanced trick makes the prompt less readable, it usually needs to be cut
+or simplified.

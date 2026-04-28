@@ -1,443 +1,319 @@
-# Suno AI v4.5+ Prompt Engineering Guide for Comedy Songwriting
+# Suno v5 and v5.5 Prompt Engineering Guide
 
-This guide provides a comprehensive framework for generating high-quality, structured, and creative comedy songs using Suno AI. It combines the "Narrative Blueprint" method with "Timed Efficiency Cues" to give the AI a clear and powerful set of instructions.
+This guide updates the archived Suno prompting material for current model
+behavior.
 
-## 1. The Core Philosophy: Narrative Blueprint
+It keeps the useful core ideas from the older documents, but filters them
+through what is still viable for Suno v5 and v5.5.
 
-Instead of giving the AI a simple list of keywords, you must provide a **vision**. Think like a director scoring a film scene. Your prompt should tell a story about the sound and the emotional journey of the song.
+## Model Snapshot
 
-**Old Way (Less Effective):**
-`"Pop, energetic, male vocals, funny"`
+### Suno v5
 
-**New Way (Highly Effective):**
-`"A quirky indie-pop track that starts with a simple, hesitant ukulele. The chorus erupts with a full, upbeat band, including a bouncy bassline and hand claps, before a surprisingly epic synth solo in the bridge. The mood is anxious but explosive."`
+Still useful for:
 
-## 2. The Two-Part Prompt Architecture
+- strong structural coherence
+- better arrangement flow
+- persistent instrumental identity
+- more deliberate control of tempo, key, dynamics, and arrangement
 
-Every generation request has two main components: the **Style Prompt** and the **Lyrics**.
+Prompting implication:
 
-### A. The Style Prompt (The "How")
+- give it a clear musical brief
+- define movement across sections
+- keep the Style field purposeful and musical
 
-This is where you define the entire sonic landscape. Structure it as a detailed, multi-line description:
+### Suno v5.5
 
-- **Genre & Vibe:** Start with the core genre and overall mood.
-- **Instrumentation:** Detail the specific instruments and how they interact. Mention textures (e.g., "lo-fi crunch," "reverb-heavy guitar").
-- **Vocal Character (Character Prompt Method):** Instead of just describing the vocal sound, **describe the vocalist as a character in a specific moment**. Create a mini-biography with emotional context. See section 8 for detailed Character Prompt guidance.
-- **Song Structure & Pacing:** Outline the song's dynamic journey. Use timed cues for precision.
+Adds or strengthens:
 
-**Example Style Prompt (Old Way):**
+- more expressive results
+- Voices
+- Style Personas inside the Voices flow
+- Custom Models
+- My Taste style augmentation
+
+Prompting implication:
+
+- good prompting matters, but personalization tools now matter more than many
+  old prompt hacks
+- if you have a real voice, persona, or custom model, write prompts that
+  cooperate with those assets instead of trying to brute-force everything in
+  text
+
+## The Current Prompting Principle
+
+The winning pattern is no longer "more tricks."
+
+The winning pattern is:
+
+1. clearer musical intent
+2. stronger lyrical structure
+3. cleaner section control
+4. explicit vocal and arrangement direction
+5. using v5.5 personalization features when available
+
+## The Three Active Control Surfaces
+
+### 1. Style field
+
+Use the Style field for:
+
+- genre and blend
+- mood
+- instrumentation
+- tempo feel or BPM
+- vocal character
+- arrangement arc
+- standout production details
+
+Best practice:
+
+- write one compact paragraph or a dense sentence cluster
+- make it sound like music direction from a producer
+- describe how the track evolves
+
+Good:
+
+- "quirky alt-pop with clipped drums, elastic bass, bright synth accents, and a
+  close-mic vocal that starts restrained before opening into a bigger, more
+  anthemic chorus"
+
+Weak:
+
+- "alt pop, good drums, catchy, emotional, epic, big chorus, viral"
+
+### 2. Lyrics field
+
+Use the Lyrics field for:
+
+- the actual lyric sheet
+- section labels
+- a few meaningful cue tags
+- extra content context when it directly helps the musical result
+
+This matters more than it used to. Suno's newer models can make better use of
+context placed near the lyrics, especially when it reinforces section intent and
+performance shape.
+
+### 3. Personalization layer in v5.5
+
+Use these when available:
+
+- Voices for your actual singing voice
+- Style Personas for recallable song essence
+- Custom Models for your own sound
+- My Taste to enrich style suggestions
+
+These features often outperform older prompt gimmicks because they give Suno a
+real sonic anchor instead of a text-only approximation.
+
+## What Still Works
+
+### A. Narrative style direction
+
+Still highly viable.
+
+Describe the track as a musical scene:
+
+- how it starts
+- where it expands
+- where it drops back
+- how the bridge changes the energy
+- what the final chorus should feel like
+
+### B. Explicit arrangement movement
+
+Still highly viable.
+
+Useful examples:
+
+- "start minimal, widen at the chorus"
+- "drop drums before the final hook"
+- "bridge goes sparse, then rebuilds"
+
+### C. Clear vocal direction
+
+Still viable, especially in v5.5.
+
+Useful language:
+
+- close-mic
+- breathy
+- conversational
+- dry
+- strained
+- wide-open
+- stacked harmonies
+- deadpan
+- talk-sung
+
+### D. Sparse, high-impact section cues
+
+Still viable.
+
+Use section tags like:
+
+- `[Intro]`
+- `[Verse 1]`
+- `[Pre-Chorus]`
+- `[Chorus]`
+- `[Bridge]`
+- `[Outro]`
+
+Add only a few impactful bracket cues when they help the generation.
+
+### E. Timed or descriptive SFX for comedy
+
+Still viable when used sparingly and when mirrored in the Style field.
+
+Examples:
+
+- `[record scratch - full stop]`
+- `[short laugh track]`
+- `[phone ring]`
+- `[kazoo break]`
+
+These are strongest when they mark a real comedic turn, not when they are
+sprinkled everywhere.
+
+## What Is Now Weak Or Risky
+
+### A. Keyword sludge
+
+Low value.
+
+Huge comma piles without musical logic are less useful than a coherent style
+description.
+
+### B. Prompt injection and jailbreak tricks
+
+Weak and unreliable.
+
+Do not build core workflows around:
+
+- fake XML or JSON wrappers
+- pretend system instructions
+- artist-name smuggling
+- syntax games meant to bypass safeguards
+
+### C. Over-tagging lyrics
+
+Risky.
+
+Too many tags crowd the lyric sheet and can reduce musical clarity.
+
+### D. Treating the Style field as a database dump
+
+Weak.
+
+A short, vivid direction is usually better than a giant unordered list.
+
+## Practical Prompt Structure
+
+### Recommended Style field shape
+
+Use this order:
+
+1. genre or blend
+2. tempo or pulse
+3. instrumentation
+4. vocal style
+5. emotional arc
+6. section movement
+
+Example:
 
 ```text
-A sad emo-trap track at 145 BPM.
-Instrumental: Soft piano chords and vinyl crackle start the verse. The chorus builds with heavy 808s and a melancholic lead synth. The bridge features reversed vocal FX and ambient textures. A stuttered vocal chop happens at 1:15.
-Vocal Cues: A moody, autotuned male vocal whispers heartbreak during the verses, rising to a full, layered voice in the chorus.
-Mood: Melancholic, with a lazy afternoon pacing that builds to a dramatic release.
+Off-kilter synth-pop at 108 BPM with dry drums, rubbery bass, tight rhythm guitar, and bright analog synth accents. Close-mic deadpan lead vocal in the verses, then a wider and more melodic chorus with stacked harmonies. Starts minimal and suspicious, grows more playful in the pre-chorus, then opens into a bigger hook before a brief stop-time gag in the bridge.
 ```
 
-**Example Style Prompt (Character Prompt Method - New Way):**
+### Recommended Lyrics field shape
+
+Use:
 
 ```text
-A sad emo-trap track at 145 BPM.
-Instrumental: Soft piano chords and vinyl crackle start the verse. The chorus builds with heavy 808s and a melancholic lead synth. The bridge features reversed vocal FX and ambient textures. A stuttered vocal chop happens at 1:15.
-Vocal Character: A young man in his mid-20s, alone in his bedroom late at night, reflecting on heartbreak. His voice carries the weight of exhaustion and vulnerability. He sings softly during the verses, almost as if talking to himself, then builds to a raw, emotional cry in the chorus. There's a slight wavering in his sustained notes—not quite breaking, but filled with the pain of someone who hasn't fully processed their loss. His delivery feels intimate and real, like he's letting you into his private moment.
-Mood: Melancholic, with a lazy afternoon pacing that builds to a dramatic release.
+[Verse 1]
+...
+
+[Pre-Chorus]
+...
+
+[Chorus]
+...
 ```
 
-Notice the difference? The Character Prompt version provides **context, emotional state, physical setting, and vocal performance cues** that emerge from the character's emotional narrative.
+Keep bracketed cues rare and intentional.
 
-### B. The Lyrics (The "What")
+## Guidance For Comedy Songs
 
-This field contains the words to be sung, along with structural and performance tags.
+Comedy works best when the music is still a real song.
 
-## 3. Mastering In-Lyric Tags: `[]` vs. `()`
+Prioritize:
 
-The correct use of brackets and parentheses is critical for controlling the output.
+- a real hook
+- escalating premise
+- one or two musical surprise points
+- clear timing before payoff lines
+- callbacks that feel earned
 
-### Square Brackets `[]`: For Commands & Structure
+Do not make the track a container for random jokes. Suno responds better when
+the music and comedy are part of the same structure.
 
-Use square brackets for **all non-lyrical content**. These are direct commands to the AI.
+## Guidance For Voices And Personas in v5.5
 
-- **Structural Tags:** `[Intro]`, `[Verse]`, `[Chorus]`, `[Bridge]`, `[Drop]`, `[Outro]`
-- **Instrumental Cues:** `[guitar solo]`, `[dramatic synth swell]`, `[808 drop]`
-- **Sound Effects (SFX):** `[sound of a car crashing]`, `[cat meowing]`, `[explosion]`
-- **Vocal Style Changes:** `[Whisper]`, `[Shout]`, `[Spoken Word]`
-- **Timed Cues:** For ultimate precision, combine with timestamps.
-  - `[Intro – 0:00–0:15 – ambient synth build with layered vocal hums]`
-  - `[Break – 0:40–0:48 – chopped vocal loop and horn stabs]`
+### If using Voices
 
-### Parentheses `()`: For Sung Ad-Libs
+- keep the vocal writing singable
+- avoid impossible rapid mode shifts unless that is intentional
+- write the Style field for the backing track and performance feel, not as a
+  replacement for the voice itself
+- if there is an Audio Influence control, keep it high enough to preserve the
+  voice identity
 
-Use parentheses for **sung ad-libs, background vocals, and brief interjections** that should be part of the vocal performance.
+### If using Style Personas
 
-- `I walked all day (all day long)`
-- `She really said that? (he couldn't believe it)`
-- `(ooh-yeah)`
+- let the Persona carry recurring style DNA
+- keep the new prompt focused on the new song rather than re-describing
+  everything the Persona already implies
 
-## 4. Advanced Techniques & Creative Structures
+### If using Custom Models
 
-- **Call and Response:** Use parentheses to create a dialogue between vocalists.
-  - `[Verse]`
-  - `(Can you hear me?)`
-  - `I'm calling out your name!`
-  - `(I'm right here!)`
-- **Layered Textures:** Use tags to build complex soundscapes.
-  - `[Intro][Melancholic Atmosphere][Tape Hiss][Faint piano and rainfall samples]`
-- **"Normal Speak":** For more realistic and less "sing-songy" vocals, write lyrics in a more conversational style and even add the tag `[doesn't have to rhyme]`.
+- rely more on precise song direction and less on artist imitation language
+- use the model to provide the sonic fingerprint, and the prompt to specify the
+  current track
 
-## 5. Summary Cheat Sheet
+## Viability Matrix
 
-- **DO:**
-  - Use `[]` for all musical and structural directions.
-  - Use `()` for sung ad-libs.
-  - Write descriptive, narrative-style prompts.
-  - Be specific about instruments, vocal tones, and FX.
-  - Include timed cues in your structural tags for precision.
-- **AVOID:**
-  - Putting musical instructions in `()`.
-  - Using vague, single-word descriptions like "cool" or "good beat."
-  - Forgetting to define the song's structure with tags.
-  - Mixing up the Style Prompt and the Lyrics fields.
+### Strong in v5 and v5.5
 
-## 6. Unusual SFX and Nonstandard Elements for Comedy (Reddit-tested)
+- narrative style prompts
+- explicit arrangement arcs
+- clean section tags
+- vocal character language
+- a few meaningful SFX cues
+- lyrical context that supports structure
 
-Comedy often lands when the music breaks expectation: hard cuts, silly foley, meta moments. Use bracketed, descriptive SFX and timestamps to force those moments.
+### Better in v5.5 than earlier models
 
-Best practices:
+- realistic vocal identity
+- recurring project sound through personalization
+- cooperation between prompt text and stored style or voice assets
 
-- Prefer descriptive SFX over onomatopoeia that might be sung. For example, use `[comedy slide whistle glissando]` instead of `[boing]`.
-- Never use asterisks `*like this*` for SFX; some users report it gets interpreted as shouting. Stick to `[brackets]`.
-- Time your gags. Add timestamps for precision: `[01:04 record scratch, full stop]`, `[00:28 crowd gasp then awkward silence 1s]`.
-- Mix genres on purpose with bracket meta-tags if needed: `[style: surf-rock polka mashup]`, `[tempo: 160 BPM]`, `[vocal style: deadpan baritone]`. The narrative style prompt should still lead.
-- Use structural gags: `[record scratch freeze]`, `[rimshot]`, `[censor beep]`, `[laugh track]`, `[airhorn]`, `[kazoo solo]`, `[k-pop cheer chant]`, `[accordion polka break]`, `[gameboy chiptune interlude]`, `[wilhelm scream]`.
-- Non-lyrical commands and SFX must be in `[]`. Keep `( )` for sung ad-libs only.
+### Weak, unstable, or not worth centering
 
-Example comedy “recipes”:
+- syntax gimmicks
+- overlong prompt stacks
+- artist-name dependence
+- cluttered tag walls
+- pseudo-technical hacks that have no official support
 
-1. Stop-the-music reveal
+## Working Rule
 
-```text
-[00:36 pre-chorus build: rising toms, bigger reverb]
-[00:44 record scratch — full stop]
-[00:45 spoken aside: deadpan truth reveal]
-[00:49 music resumes with kazoo lead, lighter drum kit]
-```
+When in doubt:
 
-1. Crowd/audience interplay
-
-```text
-[intro: room tone, small venue crowd]
-[verse: single mic, close]
-[00:30 crowd gasp]
-[00:31 (…just kidding)]
-[00:32 laugh track — short]
-```
-
-1. Genre flip for the punchline
-
-```text
-[00:00 indie-folk verse]
-[00:40 polka break — accordion + oom-pah tuba]
-[00:55 return to indie-folk, add glockenspiel sparkle]
-```
-
-1. Phone/skit interrupt
-
-```text
-[01:10 phone ring SFX, lofi filter on band]
-[01:12 spoken voicemail bit]
-[01:22 hard cut back: full mix, big downbeat]
-```
-
-Advanced/experimental:
-
-- Some users report success with per-syllable note hints like `(G)` in the lyrics. Use sparingly and test; keep `( )` minimal to avoid clutter, since `( )` are sung.
-- You can combine multiple bracket tags on one line to enforce genre tempo and vocal style, but favor the narrative style prompt for macro direction.
-
-### SFX Toolbox (common cues to copy/paste)
-
-Use these bracketed cues and add timestamps where impact matters. Keep ad-libs in ( ).
-
-- Stingers and Stops: `[record scratch — full stop]`, `[rimshot]`, `[censor beep]`, `[awkward silence 1s]`
-- Audience/Room: `[crowd gasp]`, `[laugh track — short]`, `[small venue room tone]`
-- Gag Instruments: `[kazoo solo]`, `[accordion polka break]`, `[gameboy chiptune interlude]`, `[slide whistle glissando]`
-- Skit/Phone Bits: `[phone ring SFX]`, `[voicemail bit — spoken]`, `[lofi filter on band]`
-- Genre/Meta: `[k-pop cheer chant]`, `[surf-rock break]`, `[EDM airhorn]`
-
-Examples with timing:
-
-```text
-[00:44 record scratch — full stop]
-[00:45 spoken aside: deadpan reveal]
-[00:55 laugh track — short]
-```
-
-```text
-[01:10 phone ring SFX, lofi filter on band]
-[01:12 spoken voicemail bit]
-[01:22 hard cut back: full mix]
-```
-
-## 7. Character Prompt Method for Vocal Performance
-
-The Character Prompt Method is a powerful technique for generating vocalists that feel authentic, emotionally grounded, and performance-rich. Instead of describing a voice's technical qualities, you create a **mini-biography and emotional context** for the performer. This gives the AI a framework for understanding not just *what* the voice should sound like, but *why* it sounds that way.
-
-This approach is also known as **"Persona Stacking"** in the Suno community—building a dense, interconnected web of concepts that drastically narrows the AI's path and reduces vocal inconsistency.
-
-### Core Principle
-
-A character with a story delivers a performance. The voice becomes a vessel for that story. More dimensions add to the "realness" of the persona, locking in consistency.
-
-### How to Structure a Character Prompt
-
-#### 1. The Persona (Who)
-
-- Age and basic identity
-- Profession or background (optional, but helpful)
-- Current emotional state or life situation
-- Accent or country of origin (influences vocal delivery)
-
-#### 2. The Context (Where & When)
-
-- Physical setting and time of day
-- Immediate circumstances (alone, with others, performing, etc.)
-- Environmental details that affect the voice (indoor reverb, late-night tiredness, etc.)
-
-#### 3. The Emotional Arc (Why)
-
-- The emotional core of what's being sung
-- How the character feels about their situation
-- How that emotion manifests in their voice
-
-#### 4. Performance Cues (How)
-
-- Physical sensations (tension, breathing patterns, throat catch)
-- Vocal delivery choices (whispered, full-voiced, hesitant, confident)
-- How emotion affects vocal quality (wavering, breaking, catching, breathiness)
-- Subtleties (slight rasp, tremor in sustained notes, pauses for breath/emotion)
-
-#### 5. Sonic Anchor (The Secret Sauce) - OPTIONAL
-
-- A reference to a well-known artist or vocal style
-- This single line can do the work of 20 descriptive words
-- **Caution:** Suno may block explicit celebrity names; use cross-artist comparisons instead (e.g., "the attitude of Janis Joplin with the delicacy of Joni Mitchell")
-- Use descriptive phrases rather than direct names when possible
-
-### The Persona Stacking Formula (Four Layers for Maximum Consistency)
-
-For the most reliable vocal consistency, stack these four layers of information:
-
-#### Layer 1: Demographic & Timbre
-
-- Age, gender, vocal type (tenor, alto, soprano, baritone, contralto, etc.)
-- Core sound characteristics (raspy, smooth, breathy, nasal, gravelly, ethereal)
-- Example: "Female singer, early 30s, contralto, voice is androgynous and smooth with a cold, digital quality"
-
-#### Layer 2: Technical Delivery
-
-- How they sing, not just what they sound like
-- Articulation style, energy level, breath control
-- Specific vocal techniques (belt, whisper, falsetto, rapid-fire, drawl, staccato)
-- Example: "Delivery is monotone and detached with sharp, precise enunciation, occasionally elongating words for dramatic effect"
-
-#### Layer 3: Emotional & Style Context
-
-- The feeling behind the performance
-- How this character's emotions shape their voice
-- The vibe or attitude they bring
-- Example: "The performance feels emotionally numb yet sinister, as if reporting from a dystopian future"
-
-#### Layer 4: Sonic Anchor (Optional but Powerful)
-
-- A targeted reference point to a recognizable vocal style or artist(s)
-- Use cross-artist comparisons to avoid Suno content blocks
-- Example: "Think of a cross between Grimes and the haunting atmosphere of HEALTH" (rather than just naming one artist)
-
-**Why This Works:** These four layers create a dense, interconnected web of concepts that point toward a specific sonic neighborhood. It drastically narrows the AI's path, reducing its ability to "hallucinate" a completely different vocalist.
-
-#### Complete Stacked Persona Example - Dark Synthwave
-
-```text
-Female singer, contralto, with an androgynous, cold, and smooth voice. Her delivery is monotone and detached with sharp, precise enunciation, elongating words for dramatic effect. The performance is emotionally numb yet sinister, like Grimes meets the haunting atmosphere of HEALTH.
-```
-
-Compare this to a weak persona:
-
-```text
-Female dark synthwave vocals, cold
-```
-
-The first stacks all four layers and creates instant clarity. The second leaves the AI to guess.
-
-### Full Character Prompt Examples
-
-#### Example 1: Vulnerable Bedroom Recording
-
-```text
-Character: A 19-year-old college student, home for the weekend. 
-It's 2 AM. She's alone in her childhood bedroom, sitting on the edge of her bed.
-
-Context: The room is quiet except for the soft hum of the radiator. Street lights cast shadows through the window. She's been staring at her phone for an hour, rereading old messages.
-
-Emotion: She's heartbroken but trying to hold it together. The sadness is deep but not performative—this is private grief. There's a small hope mixed in with the pain, a faint belief that things might get better.
-
-Voice: She sings softly at first, almost as if she's talking to herself. Her voice carries the weight of sleeplessness—not tired, but emotionally drained. In the first verse, her delivery is gentle and hesitant, with slight breathing pauses before vulnerable lines. During the chorus, she builds a little more courage, and her voice becomes fuller, more present. But there's a catch in her throat during a key emotional moment—not a full break, but a wavering that reveals the depth of her feeling. Her sustained notes have a subtle vibrato born from holding back tears. By the bridge, she's let some walls down, and her voice is more raw and honest.
-```
-
-#### Example 2: Confident Club Performer
-
-```text
-Character: A 28-year-old drag queen, stage name Luna Celestial.
-It's Saturday night, she's on stage at a packed nightclub.
-
-Context: The stage lights are hot. The crowd is cheering. The energy is electric. The beat drops right as she opens her mouth to sing.
-
-Emotion: She's euphoric and powerful. Every note is a declaration. She owns the stage, owns her voice, owns the moment. There's joy in every syllable, a celebration of self.
-
-Voice: She commands the mic with absolute confidence. Her delivery is sharp and crisp, every word articulated with precision. She has excellent breath control and belts with power in the chorus. Her voice is commanding but not aggressive—there's playfulness and sass in her tone. She uses vocal runs and riffs to showcase her range and control. When hitting high notes, she's fully present and strong. There's personality in every phrase—slight growls, playful ad-libs, and exaggerated emotional reactions that feel authentic to her performance style.
-```
-
-#### Example 3: Introspective Rapper
-
-```text
-Character: A 35-year-old man reflecting on his past.
-It's a rainy afternoon. He's sitting in a coffee shop, notebook in front of him, but he's not writing—he's remembering.
-
-Context: The café has a soft, ambient energy. Quiet conversations around him. The sound of rain against the windows. He's nursing a cold coffee, lost in thought.
-
-Emotion: He's processing decades of experiences—wins, losses, mistakes, growth. There's a calm acceptance to his reflection, tinged with a slight sadness for paths not taken. But there's also wisdom and hard-won peace.
-
-Voice: His delivery is measured and thoughtful. He's not performing for an audience; he's speaking a truth to himself. His cadence is steady but not stiff—there's natural rhythm and conversational flow. In verses about regret, his voice softens and becomes more introspective. When touching on resilience, his tone strengthens. He doesn't shout; instead, he uses emphasis and precision. There's a slight rasp in his voice—the texture of experience. His breath is audible in places, emphasizing vulnerability. He pauses between thoughts, letting silence breathe.
-```
-
-### Key Techniques for Effective Character Prompts
-
-1. **Sensory Details:** Include what the character sees, hears, and feels. ("Cold mic", "Warm stage lights", "Rainy window", "Packed dance floor")
-
-2. **Physical Embodiment:** How does the emotion live in the body? ("Tight throat", "Relaxed shoulders", "Shaking hands", "Expanded chest")
-
-3. **Specificity Over Vagueness:** Instead of "sad voice," use "voice that carries the weight of sleeplessness—not tired, but emotionally drained."
-
-4. **Emotional Specificity:** "Happy" is vague. "Euphoric and powerful, celebrating self" is specific and actionable.
-
-5. **Performance Intent:** Why is the character singing? To remember? To perform? To heal? To celebrate? This deeply influences vocal delivery.
-
-6. **Age & Life Experience:** A 16-year-old's heartbreak sounds different from a 35-year-old's. Let age inform the voice's maturity, timbre, and wisdom.
-
-7. **Authentic Vulnerability:** Real emotion includes imperfection. Include moments of catching in the voice, slight tremors, pauses for breath/composure.
-
-### Important Note: Artist References & Suno's Content Policy
-
-**Be Strategic with Artist Comparisons:**
-
-- Suno may block explicit celebrity names in some cases
-- Instead of "sounds like Adele," try "sounds like a belting powerhouse with emotional depth"
-- Use **cross-artist comparisons** to be safer: "A blend of the sass of P!nk and the vulnerability of Sam Smith"
-- **Descriptive phrases work better** than direct names: "with the aggressive grit of a political rapper" instead of naming a specific artist
-- The four-layer stacking approach works because it describes the vocal characteristics, not just referencing artists
-
-**Sonic Anchors Still Work:**
-
-The community has confirmed that thoughtful, comparative sonic anchors do improve consistency when phrased carefully. The key is grounding them in **vocal qualities and attitudes** rather than trying to clone a specific voice.
-
-### Common Pitfalls to Avoid
-
-- **Over-describing technical vocals:** Don't say "use a soprano range" or "hit F#5." Let the character's age and emotional arc determine range.
-- **Making it too flowery:** Keep description grounded and human. Avoid purple prose.
-- **Ignoring the song structure:** Your character should sound different in verses vs. choruses, reflecting shifts in emotional intensity.
-- **Forgetting that imperfection is beauty:** Real voices crack, waver, breathe. Include these as emotional markers, not flaws.
-- **Weak stacking:** Make sure all four layers are present. Personas missing any layer tend to produce inconsistent results.
-- **Confusing Persona with Style:** Personas describe the singer; Style describes the music. Keep them separate in Suno's fields.
-
-### Troubleshooting Vocal Inconsistency
-
-If you're getting wildly different vocals each generation despite a good persona:
-
-1. **Add more detail to Layers 1-3:** Demographic, delivery, and emotional context are the anchor points
-2. **Test Layer 4 (Sonic Anchor):** Remove it and see if it helps, or make it more specific
-3. **Simplify and Stack:** Make sure each layer has 1-2 specific elements, not a list of 10 things
-4. **Save your winning personas:** Once you get a great result, document the exact text and reuse it
-5. **Keep Style Prompt focused:** Don't put vocal directions in the Style Prompt—that's the Persona's job
-6. **Be consistent across generations:** Use the same persona for related songs to build a cohesive sound
-
-### Integration with Suno's Custom Persona Feature
-
-Suno now has a dedicated **Custom Persona** field (separate from Style Prompt). Here's how to use all three fields together:
-
-1. **Custom Persona Field:** Place your full stacked persona here (all four layers)
-   - This is where character biography and vocal specs live
-   - Focus on WHO is singing and HOW they sing
-   - Keep it detailed and consistent
-
-2. **Style Prompt Field:** Describe the music and instrumental arrangement
-   - Focus on genre, tempo, instrumentation, and sonic mood
-   - This allows the persona to focus purely on vocals without confusion
-
-3. **Lyrics Field:** Your song content with structural tags and ad-libs
-   - Use the bracket and parentheses system from earlier sections
-   - This completes the complete vision
-
-**Example of Proper Separation:**
-
-Custom Persona:
-
-```text
-Male singer, late 20s, tenor with a weathered, raspy tone reminiscent of early Chris Cornell. His delivery is emotionally raw and powerful, with dynamic shifts from gritty whispers to soaring belts. There's a slight vocal fry in his lower register and he clearly articulates consonants even at high intensity.
-```
-
-Style Prompt:
-
-```text
-Dark 80s synthwave with driving bassline, heavy drums, and atmospheric synth pads. The tempo is 120 BPM with moody reverb on the vocals in the verses. The chorus explodes with layered synths and a big kick. The bridge features reversed vocals and ambient textures.
-```
-
-This separation gives you maximum control and consistency.
-
-### Building Your Persona Library
-
-The Suno community has found that **saving successful personas is invaluable**. Treat your best personas like a library of "go-to singers" for different project types:
-
-- **Archive them in a text file** with names and genres
-- **Version control them** as you refine over time
-- **Tag them** by mood, genre, or vocal type for quick reference
-- **Test them iteratively** to lock in the right balance
-
-Example library structure:
-
-```text
-PERSONA LIBRARY
-================
-
-[Vulnerable Indie Folk]
-Name: Sarah's Bedroom Confession
-[content...]
-
-[Power Ballad Belter]
-Name: Rocky Mountain Powerhouse
-[content...]
-
-[Deadpan Comedy Rap]
-Name: Monotone Truth Teller
-[content...]
-```
-
----
-
-## 8. Latest Community Tips (2025)
-
-From recent Reddit discussions in r/SunoAI:
-
-- **Consistency in Prompts:** Craft prompts to ensure similar songs sound consistent. Avoid vague terms that lead to random variations.
-
-- **Combining Styles:** Mix multiple genres, periods, and cultural influences for unique sounds (e.g., "80s synthwave with Latin rhythms").
-
-- **Emotional and Narrative Depth:** Use emotions and storytelling in prompts to guide the mood and structure.
-
-- **Specificity in Instrumentation:** Be precise with instruments and sub-genres to control the sound.
-
-- **Iteration:** Test and refine prompts iteratively for better results, as Suno may require multiple attempts.
-
-Additionally, draw from Google's Prompt Engineering Guide (2025): Structure prompts with Role (e.g., "Act as a music director"), Context (background and goals), Instruction (what to do), and Output Format (how to present).
-
-Use techniques like Chain of Thought for complex creative tasks.
-
-This can help in generating more predictable and high-quality outputs.
+- simplify
+- sharpen the musical brief
+- tighten the lyric sheet
+- use personalization features if available
+- keep only the cues that materially change the audible result

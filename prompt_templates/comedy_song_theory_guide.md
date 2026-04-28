@@ -1,230 +1,230 @@
-# Comedy Song Theory Guide for Suno AI Prompting
+# Comedy Song Theory Guide for Suno v5 and v5.5
 
-This guide extracts the most relevant comedy song theory principles for improving song lyrics and effect design in Suno AI prompts. Use these principles to enhance your style prompts and lyrics structure.
+This guide keeps the useful songwriting principles from the archive and updates
+them for current Suno behavior.
 
-## Timing & Pacing for Suno Prompts
+It is not a generic comedy-writing essay. It is a guide for building songs that
+remain musically coherent inside Suno.
 
-### Optimal Tempo Ranges for Comedy
+## Core Principle
 
-- **Fast Comedy (100-150 BPM)**: Best for wordplay-heavy songs, rapid-fire jokes
-- **Medium Comedy (80-120 BPM)**: Versatile range for story-driven humor
-- **Slow Comedy (60-90 BPM)**: Perfect for absurdist ballads and parody of emotional songs
+Comedy songs work better in Suno when the song is real first and funny second.
 
-### Comedic Timing Techniques in Style Prompts
+That means:
 
-- **Strategic Pauses**: Use `[pause]` or timed cues before punchlines
-- **Accelerando/Ritardando**: Include tempo changes: `[tempo: 120-140 BPM build]`
-- **Stop-Time**: `[record scratch — full stop]` for audience laughter
-- **Unexpected Rhythm Changes**: Break patterns for surprise
+- clear hook
+- strong section contrast
+- escalating premise
+- controlled surprise
+- clean payoff
 
-### The 80/10/10 Rule
+If the track has no musical spine, better prompting will not rescue it.
 
-- **10% Setup**: First verse establishes premise
-- **80% Development**: Middle section contains main comedic content
-- **10% Payoff**: Final section delivers biggest laugh and resolution
+## Timing and Pacing
 
-## Rhyme Scheme Theory for Lyrics
+### What still works
 
-### Effective Comedy Rhyme Patterns
+- fast tempos help dense wordplay
+- medium tempos help story songs
+- slower tempos help contrast, absurdity, and deadpan material
 
-#### AABB (Couplets)
+Useful ranges:
 
-- **Best for**: Rapid-fire wordplay, nursery rhyme parodies
-- **Example**: "cat/hat, dog/log"
-- **Advantage**: Immediate payoff, easy to follow
+- 100-150 BPM for dense comedy or novelty rap-pop
+- 80-120 BPM for most verse-chorus comedy songs
+- 60-90 BPM for ironic ballads, fake-serious songs, and dramatic contrast
 
-#### ABAB (Alternating)
+### Suno-specific note
 
-- **Best for**: Storytelling, building tension
-- **Example**: "story/night, glory/bright"
-- **Advantage**: Allows complex narrative development
+Instead of over-instructing tempo inside the lyrics, put the main pacing brief
+in the Style field and use the lyric sheet only for section control and a few
+key turns.
 
-#### ABCB (Simple Four-Line)
+## Structure
 
-- **Best for**: Ballad parodies, emotional comedy
-- **Example**: "story/night, pain/bright"
-- **Advantage**: Focuses attention on B rhymes
+### Best default structure
 
-### Advanced Rhyming Techniques
+For most comedy songs, this still works:
 
-#### Internal Rhymes
+- verse
+- pre-chorus
+- chorus
+- verse
+- chorus
+- bridge or break
+- final chorus
 
-- **Purpose**: Increases comedic density
-- **Example**: "I went to the store for some s'mores, but the chores were a bore"
-- **Best Practice**: 2-3 internal rhymes per line maximum
+Why:
 
-#### Multisyllabic Rhymes
+- Suno v5 and v5.5 are good at maintaining structural logic
+- this shape gives room for escalation and callback
+- the bridge is the cleanest place for a musical joke or perspective shift
 
-- **Purpose**: Shows lyrical sophistication
-- **Example**: "intellectual/ineffectual"
-- **Tom Cardy Style**: "Casino/burrito" for absurd juxtaposition
+### Useful structure patterns
 
-#### Forced Rhymes (Intentionally Bad)
+#### 1. Escalation song
 
-- **Purpose**: Meta-humor about songwriting itself
-- **Example**: "Orange/door-hinge"
-- **Warning**: Use sparingly, can break immersion
+- Verse 1: setup
+- Chorus: the main comedic frame
+- Verse 2: escalation
+- Bridge: surprise move
+- Final chorus: payoff
 
-### Syllable Counting Guidelines
+#### 2. List song
 
-- **Match stress patterns** more than exact syllable counts
-- **8-10 syllables per line** optimal for comedy flow
-- **Consistent patterns** within verses/choruses
-- **Break patterns intentionally** for comedic effect
+- repeating hook with changing specifics
+- works when the repeated frame is strong enough to support variation
 
-## Musical Structure for Style Prompts
+#### 3. Fake-serious ballad
 
-### Standard Comedy Song Forms
+- earnest arrangement
+- absurd subject
+- delayed reveal or gradual exposure of the joke
 
-#### Verse-Chorus-Verse-Chorus-Bridge-Chorus (ABABCB)
+## Hook Theory
 
-- **Most versatile** structure for comedy
-- **Bridge serves** as escalation or perspective shift
-- **Final chorus** often includes key change or tempo shift
+The chorus must still function as a chorus.
 
-#### AABA (32-Bar Standard)
+It should:
 
-- **Classic Tin Pan Alley** structure
-- **A sections** develop the joke
-- **B section** provides contrast or twist
-- **No traditional chorus** - relies on verse strength
+- land quickly
+- repeat a memorable phrase
+- carry the central comic angle or emotional contradiction
+- survive even if the listener misses some verse detail
 
-#### List Song Structure
+Weak comedy songs often fail because the verses carry all the jokes and the
+chorus carries none of the identity.
 
-- **Verse-Chorus repeating** with different list items
-- **Examples**: "Elements" by Tom Lehrer
-- **Building intensity** through repetition
+## Rhyme and Flow
 
-### Key Signatures for Comedy
+### What still works
 
-- **Major keys**: Generally more comedic (C, G, F major most accessible)
-- **Minor keys**: For dark comedy or parody contrast
-- **Key changes**: Up a semitone for final chorus (classic musical theater trick)
+- AABB is still useful for blunt or rapid-fire comedy
+- ABAB is still useful for storytelling
+- loose conversational rhyme is useful when the voice should feel more natural
 
-## Lyrical Techniques for Lyrics
+### Suno-specific advice
 
-### Wordplay Arsenal
+Do not over-optimize for rhyme density at the cost of singability.
 
-#### Puns (Essential Comedy Tool)
+The newer models handle expressive structure better when:
 
-- **Double meanings**: Words with multiple relevant definitions
-- **Sound-alikes**: Words that sound similar but mean different things
-- **Visual puns**: Playing on spelling or appearance
+- stresses fall naturally
+- line lengths are manageable
+- repeated sections are easier to sing than the verses
 
-#### Unexpected Juxtaposition
+## Escalation
 
-- **High/Low mix**: Formal language describing mundane topics
-- **Anachronisms**: Modern concepts in historical contexts
-- **Category mixing**: Combining unrelated semantic fields
+Escalation remains one of the most reliable comedy-song devices.
 
-#### Escalation Techniques
+Use it through:
 
-- **Rule of Three**: Setup, reinforce, subvert
-- **Increasing absurdity**: Each example more ridiculous than the last
-- **Specificity creep**: Getting increasingly detailed about absurd things
+- increasing absurdity
+- narrowing specificity
+- greater emotional overreaction
+- more extreme musical treatment
 
-### Character-Based Humor
+For Suno, musical escalation is especially effective:
 
-- **Relatable flaws**: Universal human experiences
-- **Exaggerated traits**: Amplify recognizable characteristics
-- **Unexpected expertise**: Characters knowing too much about silly topics
+- bigger chorus
+- sudden dropout
+- bridge flip
+- novelty break
+- final-chorus expansion
 
-## Implementation Guide for Prompting
+## Musical Joke Placement
 
-### Pre-Writing Phase
+The most durable musical joke zones are:
 
-1. **Choose topic** and identify comedic angles
-2. **Set tone**: Gentle ribbing vs. satirical takedown
-3. **Select rhyme scheme** that serves the content
+- late pre-chorus pause before the hook
+- first chorus interruption
+- bridge reveal
+- post-bridge re-entry
 
-### Writing Process
+These placements remain viable because they align with the models' strength in
+arrangement flow.
 
-1. **Title first**: Create compelling, punny title
-2. **Story outline**: Basic narrative arc
-3. **Draft quickly**: Don't self-edit during initial creation
-4. **Read aloud**: Test rhythm and flow
+## Non-Lyrical Comedy Elements
 
-### Refinement Techniques
+Still viable when used sparingly:
 
-1. **Syllable counting**: Ensure natural speech patterns
-2. **Stress testing**: Check emphasis falls on right words
-3. **Performance preparation**: Mark pauses, emphasis, tempo changes
+- record scratch
+- spoken aside
+- short laugh track
+- novelty instrument break
+- phone or skit interruption
 
-### Quality Checklist
+Best rule:
 
-- [ ] Title is memorable and punny
-- [ ] Story maintains interest throughout
-- [ ] Rhymes feel natural, not forced
-- [ ] Rhythm matches music properly
-- [ ] Multiple laugh moments per section
-- [ ] Escalating comedy structure
-- [ ] Satisfying conclusion/payoff
+- one strong interruption is usually better than five weak ones
 
-## Master Reference Templates for Style Prompts
+## Character and Voice
 
-### The "Weird Al" Template
+### In v5
 
-```text
-Structure: Verse-Chorus-Verse-Chorus-Bridge-Chorus
-Tempo: 120-140 BPM
-Rhyme: ABAB in verses, AABB in choruses
-Syllables: 8-10 per line
-Tone: Playful, accessible, family-friendly
-```
+You can still guide vocal behavior through prompt language:
 
-### The "Tom Lehrer" Template
+- deadpan
+- nervous
+- smug
+- exhausted
+- theatrical
 
-```text
-Structure: AABA or Verse-only
-Tempo: 140-180 BPM (rapid delivery)
-Rhyme: AABB with internal rhymes
-Syllables: 10-14 per line (dense content)
-Tone: Intellectually satirical, rapid-fire
-```
+### In v5.5
 
-### The "Tom Cardy" Template
+This becomes more important because:
 
-```text
-Structure: Flexible, story-driven
-Tempo: Variable within song (100-160 BPM)
-Rhyme: Mixed schemes, unexpected patterns
-Syllables: Variable for comedic effect
-Tone: Absurdist, self-aware, conversational
-```
+- Voices can carry your actual singing identity
+- Personas can carry style memory
+- Custom Models can carry project sound
 
-## Common Pitfalls to Avoid
+So the theory now needs to support real performer identity, not just abstract
+voice adjectives.
 
-### Timing Disasters
+## What To Keep From The Old Research
 
-- **Rushing punchlines**: Give setup adequate time
-- **Overpacking lyrics**: Too many words per musical phrase
-- **Inconsistent rhythm**: Breaking musical flow for forced rhymes
+Still viable:
 
-### Content Issues
+- stop-time reveal
+- strategic pause before payoff
+- genre flip for surprise
+- specific instrumentation language
+- strong section labeling
+- clear vocal delivery descriptors
 
-- **One-joke songs**: Need multiple comedic elements
-- **Explaining jokes**: Trust audience intelligence
-- **Dating material**: Avoid references with short shelf life
-- **Offensive vs. Funny**: Punch up at institutions, not down at individuals
+Useful but secondary:
 
-### Technical Problems
+- timestamped cues
+- deliberate novelty breaks
+- production details that reinforce the joke
 
-- **Weak rhymes**: Don't sacrifice quality for convenience
-- **Syllable stress mismatches**: Words landing on wrong beats
-- **Repetitive patterns**: Need variety within consistency
+Not worth centering:
 
-## Integration with Suno SFX and Effects
+- prompt hack syntax
+- cluttered instruction stacks
+- artist-imitation dependence
+- giant tag walls
 
-Use these comedy theory principles with Suno's SFX capabilities:
+## Modern Songwriting Checklist for Suno
 
-- **Stop-the-music reveal**: `[00:44 record scratch — full stop]` followed by `[00:45 spoken aside: deadpan truth reveal]`
-- **Crowd/audience interplay**: `[00:30 crowd gasp]` then `(…just kidding)` with `[00:32 laugh track — short]`
-- **Genre flip for punchline**: `[00:40 polka break — accordion + oom-pah tuba]` then return to main genre
-- **Phone/skit interrupt**: `[01:10 phone ring SFX, lofi filter on band]` for meta comedy
+Before generating, confirm:
 
-Combine theory principles with Suno's advanced techniques:
+- the hook is strong enough to repeat
+- the style brief describes a real track
+- the verses escalate instead of restating
+- the bridge changes something meaningful
+- the song can be sung cleanly
+- any special cue is there for a reason
+- the joke is audible in the arrangement, not only in the text
 
-- Use rhyme schemes in lyrics structure
-- Apply timing rules with timestamped cues
-- Incorporate musical structures in style prompts
-- Leverage wordplay techniques in lyrical content
+## Final Rule
+
+The best Suno comedy prompting is not "more comedy instructions."
+
+It is a better song design:
+
+- cleaner hook
+- stronger pacing
+- sharper escalation
+- fewer but better interruption cues
+- better alignment between the musical brief and the lyric sheet
