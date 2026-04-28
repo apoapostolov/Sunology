@@ -1,236 +1,111 @@
 # Suno v5 and v5.5 Prompt Engineering Guide
 
-This guide updates the archived Suno prompting material for current model
-behavior.
+This guide updates the archived Sunology prompting material using higher-signal
+community evidence from Suno `v5` and `v5.5` usage.
 
-It keeps the useful core ideas from the older documents, but filters them
-through what is still viable for Suno v5 and v5.5.
+The goal is not to catalog every trick. The goal is to preserve the techniques
+that still produce audible control.
 
 ## Model Snapshot
 
 ### Suno v5
 
-Still useful for:
+Most useful when you need:
 
-- strong structural coherence
-- better arrangement flow
-- persistent instrumental identity
-- more deliberate control of tempo, key, dynamics, and arrangement
+- steadier arrangement logic
+- stronger instrumental identity
+- clearer section-to-section movement
+- fewer vocal-side artifacts than some `v5.5` runs
 
-Prompting implication:
+Best use cases:
 
-- give it a clear musical brief
-- define movement across sections
-- keep the Style field purposeful and musical
+- instrumental-first generation
+- genre work where structure matters more than vocal nuance
+- building a base track that may later be covered, extended, or reworked
 
 ### Suno v5.5
 
-Adds or strengthens:
+Most useful when you need:
 
-- more expressive results
-- Voices
-- Style Personas inside the Voices flow
-- Custom Models
-- My Taste style augmentation
+- more expressive vocal behavior
+- better emotional phrasing
+- integration with Voices
+- stronger use of Personas, Custom Models, and My Taste
 
-Prompting implication:
+Common failure modes reported by users:
 
-- good prompting matters, but personalization tools now matter more than many
-  old prompt hacks
-- if you have a real voice, persona, or custom model, write prompts that
-  cooperate with those assets instead of trying to brute-force everything in
-  text
+- hiss or harsh high-end texture
+- repetitive intros
+- title leakage at the start
+- drift toward pop wash or "live" feeling
+- mid-song flattening or collapse
+- genre weakness in some heavier or more niche styles
 
-## The Current Prompting Principle
+Best use cases:
 
-The winning pattern is no longer "more tricks."
+- vocalist-forward songs
+- persona-driven generation
+- refinement after you already know the track's identity
 
-The winning pattern is:
+## Core Principle
 
-1. clearer musical intent
-2. stronger lyrical structure
-3. cleaner section control
-4. explicit vocal and arrangement direction
-5. using v5.5 personalization features when available
+The strongest current pattern is:
 
-## The Three Active Control Surfaces
+1. use the Style field for the musical blueprint
+2. use the Lyrics field for structure, pacing, and performance emphasis
+3. keep those two surfaces aligned
+4. use personalization features as real steering tools, not decorations
+5. change one real variable per regeneration
+
+More text is not more control.
+
+## The Three Main Control Surfaces
 
 ### 1. Style field
 
 Use the Style field for:
 
-- genre and blend
-- mood
+- genre or blend
+- pulse or BPM when important
 - instrumentation
-- tempo feel or BPM
 - vocal character
-- arrangement arc
-- standout production details
+- emotional arc
+- arrangement movement
+- standout production traits
 
-Best practice:
+High-signal structure:
 
-- write one compact paragraph or a dense sentence cluster
-- make it sound like music direction from a producer
-- describe how the track evolves
+1. foundation: genre + pulse
+2. character: instrumentation + mood
+3. performance: vocal behavior
+4. movement: what changes across sections
 
-Good:
+Good example:
 
-- "quirky alt-pop with clipped drums, elastic bass, bright synth accents, and a
-  close-mic vocal that starts restrained before opening into a bigger, more
-  anthemic chorus"
+```text
+Off-center indie pop at a brisk 108 BPM with clipped drums, rubbery bass, bright analog synth stabs, and tight rhythm guitar. Close-mic deadpan verses, then a wider chorus with stacked harmonies and a stronger lift. Starts dry and suspicious, opens up in the pre-chorus, drops to near-empty space before the final chorus, then lands with a short stop-time gag.
+```
 
-Weak:
+Weak example:
 
-- "alt pop, good drums, catchy, emotional, epic, big chorus, viral"
+```text
+indie pop, catchy, emotional, synth, viral, anthem, fun, unique, huge chorus, awesome vocals, cinematic
+```
 
 ### 2. Lyrics field
 
 Use the Lyrics field for:
 
-- the actual lyric sheet
+- the full lyric sheet
 - section labels
-- a few meaningful cue tags
-- extra content context when it directly helps the musical result
+- a few precise performance or section cues
+- local energy shifts that matter musically
 
-This matters more than it used to. Suno's newer models can make better use of
-context placed near the lyrics, especially when it reinforces section intent and
-performance shape.
+This field matters more than many older prompting guides assumed. Community
+testing repeatedly shows that `v5.5` often responds well when section behavior
+is reinforced close to the lyrics.
 
-### 3. Personalization layer in v5.5
-
-Use these when available:
-
-- Voices for your actual singing voice
-- Style Personas for recallable song essence
-- Custom Models for your own sound
-- My Taste to enrich style suggestions
-
-These features often outperform older prompt gimmicks because they give Suno a
-real sonic anchor instead of a text-only approximation.
-
-## What Still Works
-
-### A. Narrative style direction
-
-Still highly viable.
-
-Describe the track as a musical scene:
-
-- how it starts
-- where it expands
-- where it drops back
-- how the bridge changes the energy
-- what the final chorus should feel like
-
-### B. Explicit arrangement movement
-
-Still highly viable.
-
-Useful examples:
-
-- "start minimal, widen at the chorus"
-- "drop drums before the final hook"
-- "bridge goes sparse, then rebuilds"
-
-### C. Clear vocal direction
-
-Still viable, especially in v5.5.
-
-Useful language:
-
-- close-mic
-- breathy
-- conversational
-- dry
-- strained
-- wide-open
-- stacked harmonies
-- deadpan
-- talk-sung
-
-### D. Sparse, high-impact section cues
-
-Still viable.
-
-Use section tags like:
-
-- `[Intro]`
-- `[Verse 1]`
-- `[Pre-Chorus]`
-- `[Chorus]`
-- `[Bridge]`
-- `[Outro]`
-
-Add only a few impactful bracket cues when they help the generation.
-
-### E. Timed or descriptive SFX for comedy
-
-Still viable when used sparingly and when mirrored in the Style field.
-
-Examples:
-
-- `[record scratch - full stop]`
-- `[short laugh track]`
-- `[phone ring]`
-- `[kazoo break]`
-
-These are strongest when they mark a real comedic turn, not when they are
-sprinkled everywhere.
-
-## What Is Now Weak Or Risky
-
-### A. Keyword sludge
-
-Low value.
-
-Huge comma piles without musical logic are less useful than a coherent style
-description.
-
-### B. Prompt injection and jailbreak tricks
-
-Weak and unreliable.
-
-Do not build core workflows around:
-
-- fake XML or JSON wrappers
-- pretend system instructions
-- artist-name smuggling
-- syntax games meant to bypass safeguards
-
-### C. Over-tagging lyrics
-
-Risky.
-
-Too many tags crowd the lyric sheet and can reduce musical clarity.
-
-### D. Treating the Style field as a database dump
-
-Weak.
-
-A short, vivid direction is usually better than a giant unordered list.
-
-## Practical Prompt Structure
-
-### Recommended Style field shape
-
-Use this order:
-
-1. genre or blend
-2. tempo or pulse
-3. instrumentation
-4. vocal style
-5. emotional arc
-6. section movement
-
-Example:
-
-```text
-Off-kilter synth-pop at 108 BPM with dry drums, rubbery bass, tight rhythm guitar, and bright analog synth accents. Close-mic deadpan lead vocal in the verses, then a wider and more melodic chorus with stacked harmonies. Starts minimal and suspicious, grows more playful in the pre-chorus, then opens into a bigger hook before a brief stop-time gag in the bridge.
-```
-
-### Recommended Lyrics field shape
-
-Use:
+Useful example:
 
 ```text
 [Verse 1]
@@ -241,79 +116,285 @@ Use:
 
 [Chorus]
 ...
+
+[Final Chorus - maximum lift, layered, slightly raw]
+...
 ```
 
-Keep bracketed cues rare and intentional.
+Do not turn the lyric sheet into a control panel.
 
-## Guidance For Comedy Songs
+### 3. Personalization layer in v5.5
 
-Comedy works best when the music is still a real song.
+Use these when available:
+
+- Voices
+- Style Personas
+- Custom Models
+- My Taste
+
+These often outperform text-only forcing because they provide a sonic anchor.
+
+Use text prompting to cooperate with them:
+
+- describe the target song clearly
+- do not restate the same concept ten ways
+- do not fight the persona/model with contradictory instructions
+
+## What Still Works Reliably
+
+### Narrative musical direction
+
+Write the prompt like producer direction, not a keyword landfill.
+
+Good prompt language describes:
+
+- how the song starts
+- where it expands
+- where it strips back
+- what the bridge changes
+- what makes the ending land
+
+### Explicit arrangement movement
+
+Still one of the strongest levers.
+
+Useful examples:
+
+- "starts minimal, widens at the chorus"
+- "kick drops out before the final hook"
+- "bridge goes sparse and tense, then rebuilds"
+- "short instrumental intro, chorus arrives early"
+
+### Vocal direction
+
+This remains one of the most reliable descriptive categories.
+
+Useful vocabulary:
+
+- close-mic
+- breathy
+- dry
+- conversational
+- deadpan
+- strained
+- wide-open
+- talk-sung
+- stacked harmonies
+- layered response vocals
+
+### Sparse section cues
+
+Useful:
+
+- `[Intro]`
+- `[Verse 1]`
+- `[Pre-Chorus]`
+- `[Chorus]`
+- `[Bridge]`
+- `[Outro]`
+- `[Short Instrumental Intro]`
+- `[Final Chorus - biggest lift]`
+
+Keep the cue count low. The point is to mark turning points, not annotate every
+breath.
+
+### Descriptive prompts over giant tag stacks
+
+Reddit discussion around `v5` and `v5.5` repeatedly points in the same
+direction:
+
+- readable prompts outperform giant unordered tag piles
+- concise layered prompts outperform giant prompt essays
+- structure description often matters more than giant meta-tag lists
+
+## What Is Weak, Risky, or Overrated
+
+### Giant tag libraries
+
+Low value as a primary method.
+
+Tags can help in moderation, but long catalogs usually add noise faster than
+control.
+
+### Prompt injection tricks
+
+Do not build a workflow around:
+
+- fake JSON or XML
+- pretend system instructions
+- jailbreak phrasing
+- schema cosplay
+
+These are not stable prompt engineering.
+
+### Artist-name dependence
+
+Risky and often unnecessary.
+
+A stronger pattern is to translate the reference into musical language:
+
+- instrumentation
+- arrangement density
+- vocal posture
+- drum behavior
+- harmonic brightness or darkness
+- mix energy
+
+### Overloaded lyrics
+
+Too many bracket tags, parenthetical notes, and side instructions can make the
+song feel confused.
+
+Parentheses are especially unreliable as "private" stage direction. Users often
+report that they get treated as audible material or group-vocal behavior.
+
+### Contradictory Style and Lyrics fields
+
+This is one of the most common causes of flat or strange results.
+
+If the Style field says glossy, huge, modern pop and the lyrics are tagged like
+an intimate dry folk performance, expect instability.
+
+## Prompt Construction Patterns
+
+### Standard prompt shape
+
+Use this order:
+
+1. genre or blend
+2. tempo or pulse
+3. instrumentation
+4. vocal behavior
+5. emotional character
+6. arrangement movement
+
+### When to keep the Style field shorter
+
+Shorten the Style field when:
+
+- the lyrics carry important section behavior
+- `v5.5` is flattening or overpowering nuance
+- you are using a Voice or Persona that already supplies strong identity
+
+This is a recurring community pattern: if `v5.5` is getting too samey or too
+maximalist, reduce prompt clutter and move only the most important section
+instructions into the lyrics.
+
+### When to use BPM
+
+Use BPM when:
+
+- rhythm identity is critical
+- comedy timing depends on pace
+- dance genre accuracy matters
+
+Skip BPM when a looser phrase like "midtempo", "slow burn", or "brisk" is
+enough.
+
+## Model-Aware Workflows
+
+### Workflow A: `v5` for bed, `v5.5` for vocal feel
+
+This is one of the most repeated practical workflows in current community use:
+
+1. build the instrumental identity in `v5`
+2. use `v5.5` when you need more expressive vocals or stronger phrasing
+3. compare whether the `v5.5` pass improves the song or just adds artifacts
+
+Best when:
+
+- `v5.5` keeps over-brightening the song
+- you like `v5` arrangement logic but want more expressive singing
+
+### Workflow B: seed, cover, or audio-first steering
+
+Use a seed or source audio more aggressively when:
+
+- the genre is niche or heavy
+- text prompts keep collapsing into mainstream pop behaviors
+- you want a stable melodic or structural anchor
+
+### Workflow C: voice-aware prompting
+
+When building a Voice for `v5.5`:
+
+- include sung material if singing quality matters
+- include spoken material if spoken or talk-sung delivery matters
+- consider separate voices for radically different use cases such as rap,
+  belting, screaming, or soft indie delivery
+
+## Failure Mode Countermeasures
+
+### Repetitive intros
+
+Try:
+
+- calling for a short intro
+- getting to the hook earlier
+- explicitly defining intro character instead of leaving it generic
+
+### Title leakage at the start
+
+If the title keeps getting sung immediately:
+
+- reduce title-like repetition in early lines
+- make the opening lyric less slogan-like
+- avoid style phrasing that sounds like a trailer title reveal
+
+### Hiss, harsh sibilance, or over-bright endings
+
+Treat this as a model artifact problem, not just a prompt problem.
+
+Useful mitigations:
+
+- compare `v5` vs `v5.5` for the same concept
+- simplify over-dense style prompts
+- avoid stacking too many "bright", "wide", "anthemic", and "huge" cues at once
+- regenerate with one variable changed rather than rewriting the whole song
+
+### Mid-song collapse or pop reversion
+
+Try:
+
+- stronger section contrast in the lyrics
+- clearer bridge purpose
+- fewer conflicting style adjectives
+- seed or cover workflows when text prompting keeps reverting
+
+### Forced "live", chanting, stomping, or crowd-feel creep
+
+Avoid:
+
+- vague "epic" prompt sludge
+- too many communal or festival-coded words
+- unnecessary crowd-style cues
+
+If it keeps happening, rewrite the style direction to sound more studio-tight
+and intimate.
+
+## Comedy Guidance
+
+Comedy still works best when the underlying song is musically real.
 
 Prioritize:
 
-- a real hook
-- escalating premise
-- one or two musical surprise points
-- clear timing before payoff lines
-- callbacks that feel earned
+- a usable hook
+- one escalating premise
+- a few timing-critical musical surprises
+- cleaner setup before payoff lines
 
-Do not make the track a container for random jokes. Suno responds better when
-the music and comedy are part of the same structure.
+Use novelty cues sparingly:
 
-## Guidance For Voices And Personas in v5.5
+- one stop-time reveal is stronger than five random interruptions
+- a deadpan spoken aside can outperform a loudly telegraphed punchline
+- musical contrast is often a better joke than extra verbal clutter
 
-### If using Voices
+## Working Rules
 
-- keep the vocal writing singable
-- avoid impossible rapid mode shifts unless that is intentional
-- write the Style field for the backing track and performance feel, not as a
-  replacement for the voice itself
-- if there is an Audio Influence control, keep it high enough to preserve the
-  voice identity
-
-### If using Style Personas
-
-- let the Persona carry recurring style DNA
-- keep the new prompt focused on the new song rather than re-describing
-  everything the Persona already implies
-
-### If using Custom Models
-
-- rely more on precise song direction and less on artist imitation language
-- use the model to provide the sonic fingerprint, and the prompt to specify the
-  current track
-
-## Viability Matrix
-
-### Strong in v5 and v5.5
-
-- narrative style prompts
-- explicit arrangement arcs
-- clean section tags
-- vocal character language
-- a few meaningful SFX cues
-- lyrical context that supports structure
-
-### Better in v5.5 than earlier models
-
-- realistic vocal identity
-- recurring project sound through personalization
-- cooperation between prompt text and stored style or voice assets
-
-### Weak, unstable, or not worth centering
-
-- syntax gimmicks
-- overlong prompt stacks
-- artist-name dependence
-- cluttered tag walls
-- pseudo-technical hacks that have no official support
-
-## Working Rule
-
-When in doubt:
-
-- simplify
-- sharpen the musical brief
-- tighten the lyric sheet
-- use personalization features if available
-- keep only the cues that materially change the audible result
+- Keep prompts readable.
+- Keep Style and Lyrics aligned.
+- Use bracket cues only where the audible result should change.
+- Prefer changing one variable per regeneration.
+- Use `v5.5` personalization features as real control surfaces.
+- Treat community folklore as disposable unless it repeatedly survives actual
+  generation testing.

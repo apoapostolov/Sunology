@@ -1,154 +1,286 @@
 # Suno v5 and v5.5 Advanced Tips
 
-These are advanced techniques that still appear useful after reviewing the old
-research against current Suno behavior.
+This document covers techniques that still appear useful after comparing older
+Sunology material against recent Suno `v5` and `v5.5` community behavior.
 
-Use them selectively. They are support tools, not the foundation of the prompt.
+These are not default rules. They are higher-leverage moves for when the basic
+prompt is already solid.
 
-## High-Value Advanced Tips
+## Use These Only After The Basics Are Clean
 
-### 1. Put the song arc in the Style field
+Before using advanced tactics, make sure:
 
-This is still one of the strongest levers.
+- the Style field is readable
+- the Lyrics field has clean section structure
+- the hook arrives in a sensible place
+- the prompt is not full of contradictory moods or genre signals
 
-Do not just describe the static sound. Describe progression:
+If those basics are weak, advanced tricks usually make the output worse.
 
-- how the intro feels
-- what changes at the chorus
-- what drops out
-- what returns bigger
+## Highest-Signal Advanced Techniques
 
-### 2. Use lyrics for structural clarity
+### 1. Put movement in the Style field, not just sound
 
-Still viable and more useful than in older versions.
+This is still one of the best techniques.
 
-Section tags and a few carefully placed cues help Suno map the song shape.
+Do not only describe what the song is. Describe what it does.
 
-### 3. Use only a few strong non-lyrical cues
+Useful movement language:
 
-Good candidates:
+- starts narrow, then opens at the chorus
+- pulls drums back before the reveal line
+- bridge turns sparse and uneasy
+- final chorus is larger, rougher, and more layered
 
-- `[record scratch - full stop]`
-- `[spoken aside]`
-- `[crowd gasp]`
-- `[short laugh track]`
-- `[kazoo break]`
-- `[phone ring]`
+Why it matters:
 
-These work best when:
+- `v5` responds well to arrangement logic
+- `v5.5` often benefits from explicit shape so it does not default to one
+  emotional plateau
 
-- they mark a real change
-- they are mirrored in the Style field
-- they are rare enough to matter
+### 2. Use the Lyrics field for local control
 
-### 4. Be explicit about vocal delivery
+This is one of the biggest practical shifts from older Suno folklore.
 
-Useful descriptors that still map well:
+Use the lyric sheet for:
+
+- section labels
+- local energy shifts
+- final-chorus intensity
+- occasional performance pivots
+
+High-value examples:
+
+- `[Short Instrumental Intro]`
+- `[Pre-Chorus - tension rising]`
+- `[Final Chorus - biggest lift, layered, slightly raw]`
+
+Do not annotate every section with multiple stacked directives. One strong cue
+beats five small ones.
+
+### 3. Shorten the Style field when `v5.5` gets flattening or too glossy
+
+A recurring user pattern is that `v5.5` can over-dominate the musical result
+when the Style field is overloaded.
+
+If the output is:
+
+- too samey
+- too loud too early
+- too polished in the wrong way
+- ignoring section nuance
+
+try this:
+
+1. reduce the Style field to the core identity
+2. move only the critical section behavior into the lyrics
+3. regenerate without changing the song concept
+
+### 4. Use vocal language precisely
+
+Vocal descriptors remain one of the most reliable prompt categories.
+
+Useful terms:
 
 - close-mic
-- airy
-- deadpan
-- talk-sung
-- wide-open
-- strained
+- breathy
+- dry
 - intimate
-- layered harmonies
+- deadpan
+- conversational
+- talk-sung
+- strained
+- stacked harmonies
 
-### 5. Use BPM only when it helps
+Practical rule:
 
-Still viable, but do not force it into every prompt.
+- choose two or three vocal descriptors that actually fit the song
+- do not pile on six contradictory vocal instructions
 
-Use BPM when:
+### 5. Use `v5` and `v5.5` as different tools
 
-- comedy timing depends on speed
-- dance genre identity matters
-- the arrangement needs a precise pulse
+The most durable community workflow is not blind loyalty to one model.
 
-Skip it when a looser tempo feel is enough.
+Useful split:
 
-### 6. Let v5.5 personalization do real work
+- use `v5` when you need steadier structure or a stronger instrumental bed
+- use `v5.5` when you need more expressive vocals or a persona/voice-assisted
+  result
 
-If available, these are stronger than many old text hacks:
+This matters especially when `v5.5` introduces:
 
-- Voices
-- Style Personas
-- Custom Models
-- My Taste augmentation
+- hiss
+- harsh sibilance
+- intro sameness
+- late-song drift
 
-Advanced prompting should cooperate with them, not fight them.
+### 6. Use voices and personas as steering tools, not badges
 
-## Tips That Are Sometimes Useful
+When working with `v5.5`:
 
-### 1. Timed cues
+- a Voice should match the actual vocal behavior you want
+- a Persona should reinforce the song identity rather than conflict with it
+- a Custom Model should reduce text forcing, not justify more clutter
 
-Useful for a few critical moments, but easy to overuse.
+If you are building a Voice from source material:
 
-Best for:
+- include sung material for sung performance quality
+- include spoken material if you want talk-sung or spoken asides
+- use separate voices for radically different deliveries when needed
 
-- hard comedic stops
-- spoken reveals
-- bridge flips
-- staged re-entry moments
+### 7. Use seeds, cover flows, or audio influence when text stalls
 
-### 2. Genre flips
+For some genres, especially niche or heavy styles, text prompting alone can
+collapse toward safer mainstream outputs.
 
-Still viable for comedy or surprise songs.
+Reach for seeded or audio-first steering when:
 
-Examples:
+- the genre keeps washing out
+- the arrangement loses identity
+- the melodic center keeps drifting
+- you need to preserve something text keeps failing to anchor
 
-- indie verse into polka break
-- earnest chorus into novelty bridge
-- stripped bridge into oversized final chorus
+## Advanced Countermeasures For Common `v5.5` Problems
 
-This works only if the transition feels intentional.
+### Repetitive intros
 
-### 3. Conversational lyric guidance
+Try:
 
-Helpful when you want less sing-song phrasing.
+- explicitly calling for a short intro
+- bringing the hook earlier
+- defining the intro tone more clearly
 
-Use:
+Low-confidence but sometimes useful:
 
-- direct speech
-- short phrases
-- talk-sung lines
-- dry performance cues
+- `[Short Instrumental Intro]`
 
-## Tips To Treat As Low Confidence
+Treat that cue as experimental, not guaranteed.
 
-These showed up in older community research, but should not be treated as core
-method:
+### Title being sung too early
 
+If the track keeps blurting the title at the start:
+
+- reduce slogan-like opening lines
+- avoid repeating the title in the first lines unless you want the effect
+- make the first lyric feel like scene entry, not brand reveal
+
+### Hiss, harsh highs, and late-song fizz
+
+This is common enough to document directly.
+
+Useful responses:
+
+- compare the same concept in `v5`
+- reduce "huge", "bright", "wide", and "anthemic" stacking
+- simplify the prompt before changing the song itself
+- regenerate by changing one variable at a time
+
+### Mid-song collapse or style leakage
+
+Observed pattern:
+
+- some users report that stronger audio influence or voice-linked inputs can
+  drag source-style traits back into later sections
+
+Treat this as plausible but not fully stable.
+
+Safer response:
+
+- lower the number of competing style signals
+- make verse / chorus / bridge roles clearer
+- use a cleaner source anchor if you are steering with audio
+
+### Forced crowd, stomp, chant, or fake-live feel
+
+This often shows up when prompts drift toward vague grandiosity.
+
+Reduce:
+
+- "epic"
+- "anthemic"
+- festival-coded language
+- crowd-coded cues
+
+Increase:
+
+- close-mic
+- studio-tight
+- dry
+- intimate
+- restrained
+
+## Low-Confidence Techniques
+
+These may work sometimes, but they should not be treated as core process:
+
+- giant meta-tag catalogs
+- giant prompt essays
+- fake JSON/XML wrapping
+- prompt injection wording
+- stuffing "exclude" logic into the main Style field
+- artist-name dependence
+- excessive parenthetical stage direction
 - capitalization superstition
-- prompt injection tricks
-- fake schema formatting
-- overstacked bracket tags
-- celebrity-name smuggling
-- excessive meta syntax
 
-They may work occasionally, but they are not stable enough to build the system
-around.
+Reasons to demote them:
 
-## Recommended Advanced Workflow
+- they are inconsistent
+- they often reduce readability
+- community results around them are noisy and contradictory
 
-1. Write a clear Style field.
-2. Write a clean Lyrics field.
-3. Add only the two or three cues that materially affect the audible result.
-4. If using v5.5 features, choose whether the song should lean on a Voice,
-   Persona, or Custom Model.
-5. Regenerate by changing one real variable at a time:
-   style density, vocal direction, structure, or cue placement.
+## Advanced Workflow Patterns
+
+### Pattern A: Layered Style field
+
+Use this order:
+
+1. genre and pulse
+2. instrumentation and mood
+3. vocal behavior
+4. arrangement movement
+5. one standout production trait
+
+This gives you structure without turning the prompt into sludge.
+
+### Pattern B: Lean Style field + stronger lyric cues
+
+Use this when `v5.5` feels too blunt.
+
+Keep the Style field compact, then carry only the critical energy shifts in the
+lyrics.
+
+### Pattern C: One-variable regeneration
+
+When a render misses, change only one of:
+
+- style density
+- vocal direction
+- section cue placement
+- intro length guidance
+- bridge purpose
+
+Do not rewrite everything at once or you lose the comparison.
+
+### Pattern D: Genre-defense workflow
+
+For metal, experimental, or other easily washed-out genres:
+
+1. reduce generic pop-coded adjectives
+2. make instrumentation more explicit
+3. use seed or cover workflows earlier
+4. compare against `v5` if `v5.5` keeps smoothing the edges off
 
 ## Comedy-Specific Advanced Tips
 
-- The best gag is often a musical interruption, not a pile of joke lines.
-- Stop-time reveals are still useful.
-- A deadpan spoken aside can work better than a sung punchline.
-- A single novelty break is stronger than repeated novelty spam.
-- Stronger hooks outperform denser joke count.
+- Use musical interruption as a punchline multiplier.
+- One stop-time gag is stronger than repeated novelty spam.
+- Spoken or talk-sung asides can land harder than over-sung joke lines.
+- Keep the chorus musically satisfying even when the lyric is absurd.
+- Let the production sell the joke rather than tagging every joke.
 
 ## Working Rule
 
-Advanced prompting should increase control, not increase prompt noise.
+Advanced prompting is good only when it improves audible control.
 
-If an advanced trick makes the prompt less readable, it usually needs to be cut
-or simplified.
+If an "advanced" technique makes the prompt harder to read, harder to debug, or
+harder to compare across generations, cut it.
