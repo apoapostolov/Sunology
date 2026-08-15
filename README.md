@@ -8,7 +8,7 @@ A practical prompt and troubleshooting library for shaping, generating, and refi
 ![Data](https://img.shields.io/badge/assets-JSON-5E5C5C)
 ![Models](https://img.shields.io/badge/Suno-v5_%7C_v5.5-7C3AED)
 
-Sunology is a reference repository, not a music generator or runnable web app. It collects paste-ready generation and refinement contracts, model-aware production guidance, 141 reusable prompt modules, a machine-readable asset bundle, and a twelve-part failure-mode guide. Use it to prepare better Style and Lyrics fields, diagnose a weak render, or design a future self-hosted workflow.
+Sunology is a reference repository. There is no music generator or runnable web app inside it. It collects paste-ready generation and refinement contracts, model-aware production guidance, 141 reusable prompt modules, a machine-readable asset bundle, and a twelve-part failure-mode guide. Use it to prepare better Style and Lyrics fields, diagnose a weak render, or design a future self-hosted workflow.
 
 <!-- Finished-artifact proof needed: add an anonymized prompt-to-song case study only when its source and publication rights are documented. No app screenshot or decorative hero is required for this docs route. -->
 
@@ -49,7 +49,7 @@ Sunology is a reference repository, not a music generator or runnable web app. I
 5. If the render misses, identify one failure mode and change one meaningful variable before regenerating.
 6. Use [the refinement template](prompt_templates/song_refinement_prompt.md) when the package needs editing rather than a fresh concept.
 
-The intended Style output is a short producer brief, not a tag wall. A useful shape is:
+The intended Style output is a short producer brief. Tag walls are the failure mode. A useful shape is:
 
 ```text
 Genre and pulse; instrumentation and mood; vocal behavior; section movement;
